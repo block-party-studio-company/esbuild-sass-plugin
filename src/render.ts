@@ -187,7 +187,7 @@ export async function createRenderer(
 
     let cssText = css.toString()
 
-    if (sourceMap) {
+    if (sourceMap && !options.excludeInlineSourceMap) {
       sourceMap.sourceRoot = basedir
       sourceMap.sources = sourceMap.sources.map(source => {
         return relative(basedir, source.startsWith('data:') ? path : fileURLToPath(source))

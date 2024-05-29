@@ -81,6 +81,11 @@ export type SassPluginOptions = StringOptions<'sync'|'async'> & {
    * To enable the sass-embedded compiler
    */
   embedded?: boolean
+
+  /**
+   * Skip including the inlined source map
+   */
+  excludeInlineSourceMap?: boolean
 }
 
 export default sassPlugin
