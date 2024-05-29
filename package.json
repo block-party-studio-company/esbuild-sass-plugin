@@ -32,6 +32,7 @@
     "setup": "cd test/fixture && yarn install && cd ../issues && yarn install && cd ../..",
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "prepare": "npm run build",
     "test": "c8 mocha test/**/*.test.ts",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
